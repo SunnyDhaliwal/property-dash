@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --ink: #17211b;
+  --forest: #174d35;
+  --paper: #f5f6f2;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  text-underline-offset: 3px;
+}
+:focus-visible {
+  outline: 3px solid #d89b35;
+  outline-offset: 2px;
+}
+.container-page {
+  width: min(1120px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+.card {
+  border: 1px solid #d8ddd7;
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.button-primary {
+  background: var(--forest);
+  color: white;
+}
+.button-secondary {
+  background: white;
+  border-color: #9ba69f;
+  color: var(--ink);
+}
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  border: 1px solid #87948c;
+  border-radius: 0.45rem;
+  padding: 0.7rem;
+  background: white;
+}
+.error {
+  color: #a11b1b;
+  font-size: 0.875rem;
+}
